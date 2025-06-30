@@ -1,94 +1,112 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
+
 import About from "../About/About";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
 import Experience from "../Experience/Experience";
-import profileimg from "../../assets/profile.png"
+import Banner from "../../component/Banner/Banner";
+
 const Home = () => {
-    return (
-        <>
-            {/* Hero Section */}
-            <section className="hero min-h-screen bg-base-100 px-6 pt-24 pb-10 text-center">
-                <div className="flex flex-col items-center gap-6">
-                    {/* Profile Image */}
-                    <div className="relative">
-                        <img
-                            src={profileimg}
-                            alt="Nurul Islam Rayhan"
-                            className="w-40 h-40 rounded-full border-4 border-primary shadow-lg hover:scale-105 duration-300"
-                        />
-                        <span className="absolute bottom-0 right-2 w-3 h-3 bg-green-500 border-2 border-white rounded-full animate-ping"></span>
-                    </div>
-
-                    {/* Name with gradient look using DaisyUI color */}
-                    <h1 className="text-4xl lg:text-5xl font-bold text-primary">
-                        Hi, I'm <span className="text-secondary">Nurul Islam Rayhan</span>
-                    </h1>
-
-                    <p className="text-lg text-base-content font-medium">
-                        Full Stack Developer | MERN Stack | JavaScript Lover
-                    </p>
-
-                    {/* Resume Button */}
-                    <a
-                        href="/assets/resume.pdf"
-                        download
-                        className="btn btn-primary mt-2 hover:brightness-110 hover:scale-105 duration-300"
-                    >
-                        ⬇ Download Resume
-                    </a>
-
-                    {/* Social Icons */}
-                    <div className="flex justify-center gap-6 mt-6 text-2xl">
-                        <a
-                            href="https://github.com/niraihan"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
-                            className="hover:text-primary transition"
-                        >
-                            <FaGithub />
-                        </a>
-                        <a
-                            href="https://linkedin.com/in/niraihan"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                            className="hover:text-primary transition"
-                        >
-                            <FaLinkedin />
-                        </a>
-                        <a
-                            href="https://twitter.com/iamniraihan"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Twitter"
-                            className="hover:text-primary transition"
-                        >
-                            <FaTwitter />
-                        </a>
-                        <a
-                            href="https://facebook.com/niraihan2"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Facebook"
-                            className="hover:text-primary transition"
-                        >
-                            <FaFacebook />
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-
-            {/* Other Sections */}
-            <About />
-            <Skills />
-            <Projects />
-            <Experience />
-        </>
-    );
+  return (
+    <>
+      <Banner />
+      <About />
+      <Skills />
+      <Projects />
+      {/* <Experience /> */}
+    </>
+  );
 };
 
 export default Home;
+
+
+
+
+// import React from "react";
+// import {
+//   FaGithub,
+//   FaLinkedin,
+//   FaTwitter,
+//   FaFacebook,
+// } from "react-icons/fa";
+// import profile from "../../assets/profile.png"; // adjust path as needed
+// // import resume from "../../assets/resume.pdf"; // optional
+
+// const Home = () => {
+//   return (
+//     <section className="hero min-h-[80vh] bg-base-100 px-4 md:px-10">
+//       <div className="hero-content flex-col lg:flex-row-reverse gap-10">
+//         <img
+//           src={profile}
+//           className="max-w-xs rounded-full shadow-2xl border-4 border-primary"
+//           alt="Profile"
+//         />
+//         <div>
+//           <h1 className="text-4xl md:text-5xl font-bold text-primary">
+//             Hi, I’m <span className="text-secondary">Nazrul Islam</span>
+//           </h1>
+//           <p className="py-4 text-lg md:text-xl font-medium">
+//             A Passionate <span className="text-accent">Frontend Web Developer</span>
+//           </p>
+//           <p className="mb-6 max-w-xl text-base text-justify">
+//             I love crafting beautiful, responsive, and user-friendly web applications.
+//             I’m currently focused on building full-stack applications using React, Node.js,
+//             and MongoDB. Let's build something amazing together!
+//           </p>
+
+//           <div className="flex flex-wrap gap-4 mb-6">
+//             {/* <a
+//               href={resume}
+//               download="Nazrul_Resume.pdf"
+//               className="btn btn-primary"
+//             >
+//               Download Resume
+//             </a> */}
+//             <a href="#contact" className="btn btn-outline btn-secondary">
+//               Hire Me
+//             </a>
+//           </div>
+
+//           {/* Social Icons */}
+//           <div className="flex gap-4 text-2xl text-primary">
+//             <a
+//               href="https://github.com/yourusername"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="hover:text-accent transition"
+//             >
+//               <FaGithub />
+//             </a>
+//             <a
+//               href="https://linkedin.com/in/yourusername"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="hover:text-accent transition"
+//             >
+//               <FaLinkedin />
+//             </a>
+//             <a
+//               href="https://twitter.com/yourusername"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="hover:text-accent transition"
+//             >
+//               <FaTwitter />
+//             </a>
+//             <a
+//               href="https://facebook.com/yourusername"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="hover:text-accent transition"
+//             >
+//               <FaFacebook />
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Home;

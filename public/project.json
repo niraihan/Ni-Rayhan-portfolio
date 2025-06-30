@@ -1,0 +1,29 @@
+[
+  {
+    "id": "plant-care-tracker",
+    "name": "Plant Care Tracker",
+    "image": "./project/plant-iPad Pro.png",
+    "live": "https://assignment10-f3015.web.app",
+    "github": "https://github.com/niraihan/plant-care-tracker",
+    "tech": ["React", "Firebase", "MongoDB"],
+    "description": "A web application to manage and track your plants' watering schedules and growth."
+  },
+  {
+    "id": "jobtrack",
+    "name": "JobTrack",
+    "image": "./project/niraihan-assignment09.surge.sh_.png",
+    "live": "https://niraihan-assignment09.surge.sh/",
+    "github": "https://github.com/niraihan/jobtrack-client",
+    "tech": ["React", "Tailwind", "Node.js"],
+    "description": "A job listing portal for companies and job seekers with user auth and dashboard."
+  },
+  {
+    "id": "marathon-management",
+    "name": "Marathon Management System",
+    "image": "./project/assignment11- (2).png",
+    "live": "https://assignment11-d7122.web.app",
+    "github": "https://github.com/niraihan/marathon-client",
+    "tech": ["React", "Express", "MongoDB"],
+    "description": "Manage and register for marathons, complete with filtering, search, and authentication."
+  }
+]

@@ -1,5 +1,6 @@
 import React from "react";
-import profileImg from "../../assets/profile.png"; // আপনার প্রকৃত path অনুযায়ী ঠিক করুন
+import profileImg from "../../assets/profile.png"; 
+import Skills from "../Skills/Skills";
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <h2 className="text-4xl font-bold mb-12 text-center text-primary uppercase tracking-widest relative">
-          About Me
+          {/* About Me */} LET ME <span className="text-orange-500">INTRODUCE</span>  MYSELF
           <span className="block w-20 h-[3px] bg-primary mx-auto mt-2 rounded-full"></span>
         </h2>
 
@@ -53,8 +54,12 @@ const About = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };
 
 export default About;
+
+
+

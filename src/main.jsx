@@ -6,9 +6,15 @@ import {
   RouterProvider,
 } from "react-router";
 import { router } from './router/router.jsx';
+import ParticlesBackground from './component/ParticlesBackground.jsx';
+import VantaBirds from './component/VantaBirds.jsx';
+import { Toaster } from 'react-hot-toast';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router} />
+    {/* <ParticlesBackground></ParticlesBackground> */}
+    {/* <VantaBirds></VantaBirds> */}
+    <Toaster position="top-right" reverseOrder={false} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )

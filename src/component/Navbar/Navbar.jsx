@@ -7,9 +7,9 @@ const Navbar = () => {
     <>
       <li><NavLink to="/" className="font-medium" end>Home</NavLink></li>
       <li><NavLink to="/about" className="font-medium">About</NavLink></li>
-      <li><NavLink to="/skills" className="font-medium">Skills</NavLink></li>
-      <li><NavLink to="/education" className="font-medium">Education</NavLink></li>
-      <li><NavLink to="/experience" className="font-medium">Experience</NavLink></li>
+      {/* <li><NavLink to="/skills" className="font-medium">Skills</NavLink></li> */}
+      {/* <li><NavLink to="/education" className="font-medium">Education</NavLink></li> */}
+      {/* <li><NavLink to="/experience" className="font-medium">Experience</NavLink></li> */}
       <li><NavLink to="/projects" className="font-medium">Projects</NavLink></li>
       <li><NavLink to="/contact" className="font-medium">Contact</NavLink></li>
     </>

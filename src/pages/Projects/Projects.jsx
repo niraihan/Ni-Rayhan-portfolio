@@ -1,58 +1,56 @@
-import React from "react";
-import { NavLink } from "react-router";
-
-
-const projectList = [
-  {
-    id: "plant-care-tracker",
-    name: "Plant Care Tracker",
-    image: "/assets/projects/plant-care.jpg",
-    live: "https://assignment10-f3015.web.app",
-    github: "https://github.com/niraihan/plant-care-tracker",
-    tech: ["React", "Firebase", "MongoDB"],
-    description:
-      "A web application to manage and track your plants' watering schedules and growth.",
-  },
-  {
-    id: "jobtrack",
-    name: "JobTrack",
-    image: "/assets/projects/jobtrack.jpg",
-    live: "https://niraihan-assignment09.surge.sh/",
-    github: "https://github.com/niraihan/jobtrack-client",
-    tech: ["React", "Tailwind", "Node.js"],
-    description:
-      "A job listing portal for companies and job seekers with user auth and dashboard.",
-  },
-  {
-    id: "marathon-management",
-    name: "Marathon Management System",
-    image: "/assets/projects/marathon.jpg",
-    live: "https://assignment11-d7122.web.app",
-    github: "https://github.com/niraihan/marathon-client",
-    tech: ["React", "Express", "MongoDB"],
-    description:
-      "Manage and register for marathons, complete with filtering, search, and authentication.",
-  },
-];
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/project.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch projects data");
+        return res.json();
+      })
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-20 px-6 bg-base-200 text-base-content min-h-screen flex justify-center items-center">
+        <p className="text-xl font-semibold">Loading projects...</p>
+      </section>
+    );
+  }
+
   return (
-    <section className="py-20 px-6 bg-base-200 text-base-content">
+    <section className="py-20 px-6 bg-base-200 text-base-content min-h-screen">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-primary mb-12">Projects</h2>
+        <h2 className="text-4xl font-bold text-center text-primary mb-12">
+          Projects
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectList.map((project) => (
-            <div key={project.id} className="bg-base-100 shadow rounded-xl overflow-hidden">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-base-100 shadow rounded-xl overflow-hidden flex flex-col"
+            >
               <img
                 src={project.image}
                 alt={project.name}
                 className="w-full h-52 object-cover"
               />
-              <div className="p-4">
+              <div className="p-4 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-secondary mb-2">
                   {project.name}
                 </h3>
-                <p className="text-sm mb-3">{project.description}</p>
+                <p className="text-sm mb-3 flex-grow">{project.description}</p>
                 <div className="flex flex-wrap gap-2 text-sm mb-4">
                   {project.tech.map((tech, idx) => (
                     <span
@@ -63,15 +61,19 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-auto">
                   <a
                     href={project.live}
                     className="btn btn-sm btn-primary"
                     target="_blank"
+                    rel="noreferrer noopener"
                   >
                     Live Site
                   </a>
-                  <NavLink to={`/projects/${project.id}`} className="btn btn-sm btn-outline">
+                  <NavLink
+                    to={`/projects/${project.id}`}
+                    className="btn btn-sm btn-outline"
+                  >
                     View Details
                   </NavLink>
                 </div>
