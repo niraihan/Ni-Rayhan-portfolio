@@ -21,7 +21,7 @@ const Banner = () => {
             Hi, I’m <span className="text-secondary">Nurul Islam Rayhan</span>
           </h1>
           <p className="py-4 text-lg md:text-xl font-medium">
-            A Passionate <span className="text-accent"> Full Stack Developer | MERN Stack | JavaScript Lover</span>
+            A Passionate <span className="text-accent"> Junior Full Stack Developer | MERN Stack | JavaScript Lover</span>
           </p>
           <p className="mb-6 max-w-xl text-base text-justify">
             I love crafting beautiful, responsive, and user-friendly web applications.
@@ -31,8 +31,10 @@ const Banner = () => {
 
           <div className="flex flex-wrap gap-4 mb-6">
             <a
-              href="/assets/resume.pdf"
-              download="Nurul_Resume.pdf"
+              href="/resume.pdf"
+              download="Nurul_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary"
             >
               Download Resume

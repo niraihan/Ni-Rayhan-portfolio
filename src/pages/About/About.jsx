@@ -1,6 +1,6 @@
 import React from "react";
 import profileImg from "../../assets/profile.png"; 
-import Skills from "../Skills/Skills";
+
 
 const About = () => {
   return (

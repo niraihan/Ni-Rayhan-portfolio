@@ -20,10 +20,10 @@ const ParticlesBackground = () => {
             value: "#1a1a2e", // dark blue #1a1a2e #adb5ef #f19e9a
           },
         },
-        // fullScreen: {
-        //   enable: true,
-        //   zIndex: -1, // particles will go behind all content
-        // },
+        fullScreen: {
+          enable: true,
+          zIndex: -1, // particles will go behind all content
+        },
       }}
     />
   );

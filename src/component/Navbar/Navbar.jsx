@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import ThemeToggle from "../Theme/ThemeToggle";
 
 const Navbar = () => {
   const navLinks = (
@@ -29,10 +30,13 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="navbar-end">
+      <div className="navbar-end gap-0.5 md:gap-2">
+        <ThemeToggle></ThemeToggle>
         <a
-          href="/assets/resume.pdf"
+          href="/resume.pdf"
           download
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-sm btn-primary"
         >
           Resume
